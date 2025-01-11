@@ -27,6 +27,7 @@ function ProductDetail() {
                 product={product}
                 flex={true}
                 renderDescription={true}
+                renderAdd={true}
             />)}
 
         </LayOut>
