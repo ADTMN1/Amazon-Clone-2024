@@ -180,6 +180,12 @@
     gap: 2px;
 }
 
+.fixed {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 @media only screen and (max-width: 576px) {
     .header_container {
         display: flex;
