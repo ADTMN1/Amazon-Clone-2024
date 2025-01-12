@@ -9,11 +9,13 @@
     width: 100px !important;
 }
 
+.container div:not(.subtotal) {
+    height: auto !important;
+}
+
 .cart_container {
     padding: 20px;
 }
-
-
 
 .cart_container h2,
 .cart_container h3 {
