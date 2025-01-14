@@ -49,7 +49,7 @@ function Header() {
 
                         </Link>
 
-                        <Link to="#" className={classes.account}>
+                        <Link to="/auth" className={classes.account}>
 
                             <p>sign in</p>
                             <span>Account & Lists</span>
