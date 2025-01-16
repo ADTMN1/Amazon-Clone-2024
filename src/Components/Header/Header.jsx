@@ -6,10 +6,10 @@ import classes from "./Header.module.css"
 import LowerHeader from './LowerHeader';
 import { Link } from 'react-router-dom'
 import { DataContext } from '../DataProvider/DataProvider';
-
+import { auth } from '../../Utility/fireBase';
 function Header() {
 
-    const [{ basket }, dispatch] = useContext(DataContext)
+    const [{ user, basket }, dispatch] = useContext(DataContext)
     const totalItem = basket?.reduce((amount, item) => {
         return item.amount + amount
     }, 0)
@@ -49,10 +49,29 @@ function Header() {
 
                         </Link>
 
-                        <Link to="/auth" className={classes.account}>
+                        <Link to={!user && "/auth"} className={classes.account}>
+                            <div>
+                                {
 
-                            <p>sign in</p>
-                            <span>Account & Lists</span>
+                                    user ? (
+                                        <>
+                                            <p>Hello {user?.email?.split('@')[0]}</p>
+                                            <span onClick={() => auth.signOut()}>Sign Out</span>
+
+                                        </>
+                                    ) : (
+                                        <>
+
+                                            <p>Hello Sign In</p>
+                                            <span>Account & Lists</span>
+                                        </>
+
+                                    )
+
+                                }
+                            </div>
+
+
 
                         </Link>
 
