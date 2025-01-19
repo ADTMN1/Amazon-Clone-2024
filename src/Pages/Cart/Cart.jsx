@@ -11,6 +11,7 @@ import { IoIosArrowUp } from "react-icons/io";
 
 function Cart() {
     const [{ basket, user }, dispatch] = useContext(DataContext);
+
     const total = basket.reduce((amount, item) => {
         return item.price * item.amount + amount
     }, 0)
@@ -37,11 +38,11 @@ function Cart() {
                         basket?.length === 0 ? (
                             <p>Oops! No item in your cart</p>
                         ) : (
-                            basket.map((item, i) => {
+                            basket.map((item, index) => {
 
                                 return <section className={classes.car_product}>
                                     <ProductCard
-                                        key={i}
+                                        key={index}
                                         product={item}
                                         renderDescription={true}
                                         flex={true}
@@ -71,7 +72,7 @@ function Cart() {
                             <small>This order contains a gift</small>
                         </span>
 
-                        <Link to="/payments">Continue to Checkout</Link>
+                        <Link to="/payment">Continue to Checkout</Link>
                     </div>
                 )}
             </section>
