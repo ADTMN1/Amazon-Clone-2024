@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/payment/create', async (req, res) => {
-    const amount = req.query.total;
+    const amount = parseInt(req.query.total);
 
     if (amount > 0) {
         const paymentIntent = await stripe.paymentIntents.create({
