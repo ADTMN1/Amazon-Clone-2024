@@ -186,11 +186,12 @@
     z-index: 100;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 776px) {
     .header_container {
         display: flex;
         flex-direction: column !important;
         height: auto;
+
     }
 
     .lower_container ul li:not(:first-child) {
