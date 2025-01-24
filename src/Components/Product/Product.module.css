@@ -1,12 +1,15 @@
 .card_container {
-    width: 100%;
-    max-width: 250px;
+    width: 250px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     color: black;
     text-decoration: none;
     position: relative;
     margin: 0 auto;
+}
+
+.card_container:hover .button {
+    display: block;
 }
 
 .card_container img {
@@ -35,6 +38,10 @@
     background-color: var(--primary-shade);
 }
 
+.product_container section {
+    margin: 0 auto;
+}
+
 .product_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -42,7 +49,6 @@
     margin: 100px auto;
     gap: 50px;
     justify-content: center;
-    padding: 0 100px;
 }
 
 .product_flexed {
@@ -80,23 +86,10 @@
 }
 
 @media only screen and (max-width: 760px) {
-    .card_container {
-
-        max-width: 200px;
-        margin: 10px auto;
-        padding: 10px;
-    }
-
-    .product_container {
-        gap: 20px;
-    }
 
     .product_flexed {
+        display: flex;
+        flex-direction: column;
         gap: 20px;
     }
-
-    .product_flexed img {
-        width: 100%;
-    }
-
 }

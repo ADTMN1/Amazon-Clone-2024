@@ -186,7 +186,7 @@
     z-index: 100;
 }
 
-@media only screen and (max-width: 776px) {
+@media only screen and (max-width: 576px) {
     .header_container {
         display: flex;
         flex-direction: column !important;

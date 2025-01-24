@@ -34,12 +34,14 @@
     position: relative;
     margin-top: -10px;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    overflow-x: hidden;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     max-width: 1600px;
     gap: 20px;
     margin-left: auto;
     margin-right: auto;
-    place-items: center;
-    overflow-x: hidden;
     padding: 0px 10px;
+
 }
