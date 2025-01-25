@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import LayOut from '../../Components/LayOut/LayOut';
 import { DataContext } from '../../Components/DataProvider/DataProvider';
 import ProductCard from '../../Components/Product/ProductCard';
-import CurrenceFormat from '../../Components/CurrenceFormat/CurrenceFormat';
+import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat';
 import { Link } from 'react-router-dom';
 import classes from './Cart.module.css'
 import { Type } from '../../Utility/action.type';
@@ -65,7 +65,7 @@ function Cart() {
                     <div className={classes.subtotal}>
                         <div>
                             <p>Subtotal ({basket.length} items)</p>
-                            <CurrenceFormat amount={total} />
+                            <CurrencyFormat amount={total} />
                         </div>
                         <span>
                             <input type="checkbox" />

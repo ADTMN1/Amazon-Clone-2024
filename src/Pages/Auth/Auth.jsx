@@ -33,7 +33,7 @@ function Auth() {
                 navigate("/");
                 navigate(navStateData?.state?.redirect || "/");
             }).catch((err) => {
-                setError(err.message)
+                setError("please complete the input first !")
                 setLoading({ ...loading, signin: false })
             })
 
@@ -48,7 +48,7 @@ function Auth() {
                 navigate("/");
                 navigate(navStateData?.state?.redirect || "/");
             }).catch((err) => {
-                setError(err.message)
+                setError("please complete the input first !")
                 setLoading({ ...loading, signup: false })
             })
         }

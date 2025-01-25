@@ -39,7 +39,7 @@ function Header() {
                     <div className={classes.search}>
                         <select name="" id=""><option value="">All</option></select>
                         <input type="text" name='' id='' placeholder='search product' />
-                        {<BsSearch size={25} />}
+                        {<BsSearch size={42} />}
                     </div>
 
                     <div className={classes.order_container}>
@@ -70,8 +70,6 @@ function Header() {
 
                                 }
                             </div>
-
-
 
                         </Link>
 

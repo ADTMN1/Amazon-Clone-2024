@@ -4,7 +4,7 @@ import classes from "./Payment.module.css";
 import { DataContext } from '../../Components/DataProvider/DataProvider';
 import ProductCard from '../../Components/Product/ProductCard';
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
-import CurrenceFormat from '../../Components/CurrenceFormat/CurrenceFormat';
+import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat';
 import { axiosInstance } from '../../Api/Axios';
 import { ClipLoader } from 'react-spinners'
 import { db } from '../../Utility/fireBase';
@@ -31,7 +31,7 @@ function Payment() {
         try {
             const response = await axiosInstance({
                 method: "POST",
-                url: `/payment/create?total=${total * 100}`,
+                url: `/payment/create?total=${total}`,
             });
             const clientSecret = response?.data?.clientSecret;
 
@@ -97,7 +97,7 @@ function Payment() {
                                 <div className={classes.payment__price}>
                                     <div>
                                         <span style={{ display: "flex", gap: "10px" }}>
-                                            <p>Total Order |</p> <CurrenceFormat amount={total} />
+                                            <p>Total Order |</p> <CurrencyFormat amount={total} />
                                         </span>
                                     </div>
                                     <button type='submit' disabled={!stripe}>

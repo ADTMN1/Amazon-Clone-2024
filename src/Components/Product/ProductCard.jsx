@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Rating from '@mui/material/Rating';
-import CurrenceFormat from '../CurrenceFormat/CurrenceFormat';
+import CurrencyFormat from '../CurrencyFormat/CurrencyFormat';
 import classes from './Product.module.css'
 import { Link } from 'react-router-dom'
 import { DataContext } from '../DataProvider/DataProvider';
@@ -34,7 +34,7 @@ function ProductCard({ product, flex, renderDescription, renderAdd }) {
                     <small>{rating?.count || 0}</small>
                 </div>
                 <div>
-                    <CurrenceFormat amount={price} />
+                    <CurrencyFormat amount={price} />
                 </div>
                 {
                     renderAdd && <button className={classes.button} onClick={addToCart}>

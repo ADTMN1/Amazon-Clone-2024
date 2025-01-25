@@ -10,7 +10,7 @@ import Auth from './Pages/Auth/Auth';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
-const stripePromise = loadStripe('pk_test_51Qht9RP1VScyKMN8qxs8WU0kTKwqNZWNLhgBP4zvVsHrZPpHaeqqqAgJqkEarNjZiMxOIXDRb4xO2xwLQ4TFr1XO00Plv6q73D');
+const stripePromise = loadStripe('pk_test_51QhtETAHN6T75PjPTetCuIUwpRpsECZvrUAJzgyU9YrVbaVbC7uzUcr6Lsc62PgryfxL0qNIGMcESPVGuHf9xXYm00RxLRiAK0');
 
 function Routing() {
     return (

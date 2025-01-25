@@ -1,6 +1,6 @@
 .category {
     height: 350px;
-    width: 350px;
+    width: 300px;
     box-shadow: 0 0 10px black;
     background-color: white;
 }
@@ -34,10 +34,9 @@
     position: relative;
     margin-top: -10px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr) !important;
     place-items: center;
     overflow-x: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     max-width: 1600px;
     gap: 20px;
     margin-left: auto;
